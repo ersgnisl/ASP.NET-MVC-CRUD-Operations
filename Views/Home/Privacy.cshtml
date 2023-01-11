@@ -1,0 +1,98 @@
+﻿<script src="~/js/Crud.js"></script>
+
+<meta name="viewport" content="width=device-width,initial-scale = 1" />
+<body>
+    <div class="container" />
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+
+
+            <form action="">
+                <h1>Kayıt Formu </h1>
+                <br /><br />
+                <div class = "form-group">
+                <label for="isim">İsim :</label>
+                 <input id = "isim" class="form-control" type="text" name="isim" placeholder="isminizi giriniz." required=""/></div>
+                <br />
+                <div class = "form-group">
+                <label for="soyisim">Soy İsim :</label>
+                    <input id = "soyisim" class="form-control" type="text" name="soyisim" placeholder="Soy isminizi giriniz." required=""  />
+                </div> <br />
+                <div class = "form-group">
+                <label for="kayıtTarihi">Kayıt tarihi :</label> 
+                    <input id = "kayıtTarihi" class="form-control" type="date" name="kayıtTarihi" placeholder="Kayıt tarihini giriniz." required="" />
+                </div> <br /> 
+                <div class = "form-group">
+                <label for="adres">Adres :</label>
+                    <input id = "adres" class="form-control" type="text" name="adres" placeholder="Adresinizi giriniz." required="" />
+                </div> <br />
+                <div class = "form-group">
+                <label for="drdCinsiyet">Cinsiyet : </label>
+                 <select id="drdCinsiyet" class="form-select form-control">
+
+                 </select>
+
+                </div>
+                <br />
+                <div class = "form-group">
+                <label for="drdCografya">Ülke : </label>
+                 <select id="drdCografya" class="form-select form-control" onchange="SehirGetir()">
+                 </select> 
+                </div>
+                <br />
+                <div class = "form-group">
+                <label for="drdSehir">Şehir : </label>
+                 <select id="drdSehir" class="form-select form-control">
+                 </select>
+                </div>
+                <div class="Media">
+                        <label class="control-label">Medya:</label>
+                        <div class="row" id="aa_imgFile">
+                            <img src="" id="a_imgFile" width="30" height="100" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label"></label>
+                            <input type="file" name="iFormFile" id="imgFile" mediaId="" onchange="MedyaOlustur(this.id)" accept="image/*" />
+
+                        </div>
+                    </div>
+                    <br />
+                    <div id="okulTekrarliRow" class="deneme">
+                    <div class="row " id='eklenenOkul0'>
+                        <div class="col-md-3">
+                            <label class="control-label">Okul Tipi</label>
+                            <select id="OkulTipi0" class="form-select okultipi">
+
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Okul Adı</label>
+                            <input class="form-control" name="OkulAdi" id="OkulAdi0">
+                        </div>
+                        <div class="col-md-4">
+                            <label class="control-label">Mezuniyet Tarihi</label>
+                            <input type="date" class="form-control" name="MezuniyetTarihi0" id="MezuniyetTarihi0">
+                        </div>
+                        <div class="col-md-1">
+                            <label class="control-label"></label>
+                            <button type="button" onclick="OkulEkle()" style="height:35px;width:35px">+</button>
+                        </div>
+                    </div>
+                </div>
+                <br />
+                
+
+                <br /><br />
+
+                <input class="btn btn-outline-dark" onclick="fnInsert()" type="button" value="Kayıt Ol " />
+
+
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>   
+    
+
+</body>
+
